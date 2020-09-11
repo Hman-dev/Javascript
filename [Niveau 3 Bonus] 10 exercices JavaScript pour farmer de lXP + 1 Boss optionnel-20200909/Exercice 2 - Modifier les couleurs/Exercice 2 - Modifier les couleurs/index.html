@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice 2</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#bloc1 {
+			width: 500px ;
+			height: 400px ;
+			background-color: lightblue ;
+		}
+
+		#paragraphe1 {
+			color: green ;
+		}
+
+		#paragraphe2 {
+			color: red ;
+		}
+
+	</style>
+
+
+</head>
+<body>
+	<div id="bloc1">
+		<p id="paragraphe1"  >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		
+		<p id="paragraphe2" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
+	<button onclick="Fond()">Modifier fond</button>
+	<button onclick="Texte()" >Modifier texte</button>
+
+
+	<script type="text/javascript">
+
+		/** A COMPLETER */
+	let bloc = document.querySelector('#bloc1');
+	
+	function Fond(){
+		bloc.style.backgroundColor = "yellow";
+	}
+
+	 let para1 = document.querySelector('#paragraphe1');
+	 let para2 = document.querySelector('#paragraphe2');
+
+	function Texte(){
+		para1.style.color = "black";
+		para2.style.color = "black";
+	}
+
+	para1.addEventListener('mouseover',function(){
+		para1.style.color = "white";
+
+	})
+
+	para2.addEventListener('mouseover',function(){
+		para2.style.color = "white";
+
+	})
+
+	para1.addEventListener('mouseleave',function(){
+		para1.style.color = "";
+
+	})
+
+	para2.addEventListener('mouseleave',function(){
+		para2.style.color = "";
+
+	})
+
+
+/*	function mouse1(){
+		para1.style.color = "white";
+		
+	}
+
+	function mouse2(){
+		para2.style.color = "white";
+	}*/
+	
+	</script>
+
+</body>
+</html>

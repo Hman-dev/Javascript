@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+
+
+    <p id="chaines">Bonjour</p>
+    <input type="button" name="buttton" value="Tester" id="test1">
+    <p id="resultat1"></p>
+    
+    <p id="chaines2">monadres@sexe@lib.com</p>
+    <input type="button" name="buttton" value="Tester" id="test2">
+    <p id="resultat2"></p>
+    
+    <p>12test</p>
+    <input type="button" name="buttton" value="Tester" >
+
+    <p>bon7jour8812 </p>
+    <input type="button" name="buttton" value="Tester" >
+    
+
+
+    <script>
+        let tab= ["a", "b", "c" ,"d","A", "B", "C","D"];
+        const chaines= document.querySelector("#chaines").textContent;
+        console.log(chaines);
+        let btn1 = document.querySelector("#test1");
+        let btn2 = document.querySelector("#test2");
+        let result1 = document.querySelector("#resultat1");
+        let result2 = document.querySelector("#resultat2");
+
+        btn1.addEventListener('click',function(){
+            for(i=0; i< tab.length; i++){
+            if(tab[i] === chaines[0]) {
+                result1.textContent = "Bonjour chaine valide commence par une lettre entre a et d ";
+                break;
+
+            }else{
+                result1.textContent = " chaine invalide ";
+            }
+        }
+       
+        })
+
+        const caract = ["@"];
+        const chaines2 = document.querySelector("#chaines2").textContent;
+
+        console.log(chaines2);
+
+       /* btn2.addEventListener('click', function(){
+            for(i=0 ; i < caract.length ; i++){
+            if(caract[i] === chaines2[i]){
+                result2.textContent = " chaine invalide ";
+            }else{
+                result2.textContent = " chaine valide ";
+        }
+        }
+
+
+        })*/
+
+        const splits = chaines2.split("@");
+        // console.log(splits.length);
+
+        btn2.addEventListener('click', function(){
+            if(splits.length<3){
+                result2.textContent = " chaine valide ";
+
+                }else{
+                result2.textContent = " chaine invalide ";
+                }
+            /*for(i=0;i < splits.length;i++){
+                
+            }*/
+            
+
+        })
+        
+
+        
+       
+
+       
+    </script>
+
+</body>
+</html>
